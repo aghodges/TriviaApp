@@ -53,43 +53,24 @@ class quizScreenController: UIViewController {
     @IBOutlet weak var player3Score: UILabel!
     @IBOutlet weak var player4Score: UILabel!
     
+    var playerOneCount = Int()
+    var playerTwoCount = Int()
+    var playerThreeCount = Int()
+    var playerFourCount = Int()
     
     
     
-    
-    //var playerAnswer = String()
-    
-    
-    
-//    @IBAction func choiceASelect(_ sender: Any) {
-//        choiceA.backgroundColor = UIColor.blue
-//        choiceB.backgroundColor = UIColor.gray
-//        choiceC.backgroundColor = UIColor.gray
-//        choiceD.backgroundColor = UIColor.gray
-//
-//        currentPlayer.playerAnswer = "A"
-//
-//    }
-    
+
     @IBAction func choiceASelect(_ sender: Any) {
-                choiceA.backgroundColor = UIColor.blue
-                choiceB.backgroundColor = UIColor.gray
-                choiceC.backgroundColor = UIColor.gray
-                choiceD.backgroundColor = UIColor.gray
+        choiceA.backgroundColor = UIColor.blue
+        choiceB.backgroundColor = UIColor.gray
+        choiceC.backgroundColor = UIColor.gray
+        choiceD.backgroundColor = UIColor.gray
         
-                currentPlayer.playerAnswer = "A"
+        currentPlayer.playerAnswer = "A"
+        print("current player: " + currentPlayer.peerID + " answered " + currentPlayer.playerAnswer)
     }
     
-    
-    
-//    @IBAction func choiceBSelect(_ sender: Any) {
-//        choiceB.backgroundColor = UIColor.blue
-//        choiceA.backgroundColor = UIColor.gray
-//        choiceC.backgroundColor = UIColor.gray
-//        choiceD.backgroundColor = UIColor.gray
-//
-//        currentPlayer.playerAnswer = "B"
-//    }
     
     @IBAction func choiceBSelect(_ sender: Any) {
         choiceB.backgroundColor = UIColor.blue
@@ -98,19 +79,12 @@ class quizScreenController: UIViewController {
         choiceD.backgroundColor = UIColor.gray
         
         currentPlayer.playerAnswer = "B"
+        print("current player: " + currentPlayer.peerID + " answered " + currentPlayer.playerAnswer)
+
 
     }
     
-//
-//    @IBAction func choiceCSelect(_ sender: Any) {
-//        choiceC.backgroundColor = UIColor.blue
-//        choiceA.backgroundColor = UIColor.gray
-//        choiceB.backgroundColor = UIColor.gray
-//        choiceD.backgroundColor = UIColor.gray
-//
-//        currentPlayer.playerAnswer = "C"
-//
-//    }
+
     
     @IBAction func choiceCSelect(_ sender: Any) {
         choiceC.backgroundColor = UIColor.blue
@@ -119,20 +93,11 @@ class quizScreenController: UIViewController {
         choiceD.backgroundColor = UIColor.gray
         
         currentPlayer.playerAnswer = "C"
+        print("current player: " + currentPlayer.peerID + " answered " + currentPlayer.playerAnswer)
+
 
     }
-    
-//
-//    @IBAction func choiceDSelect(_ sender: Any) {
-//        choiceD.backgroundColor = UIColor.blue
-//        choiceA.backgroundColor = UIColor.gray
-//        choiceB.backgroundColor = UIColor.gray
-//        choiceC.backgroundColor = UIColor.gray
-//
-//        currentPlayer.playerAnswer = "D"
-//
-//    }
-    
+
     @IBAction func choiceDSelect(_ sender: Any) {
         choiceD.backgroundColor = UIColor.blue
         choiceA.backgroundColor = UIColor.gray
@@ -140,6 +105,8 @@ class quizScreenController: UIViewController {
         choiceC.backgroundColor = UIColor.gray
         
         currentPlayer.playerAnswer = "D"
+        print("current player: " + currentPlayer.peerID + " answered " + currentPlayer.playerAnswer)
+
 
         
     }
@@ -168,22 +135,40 @@ class quizScreenController: UIViewController {
     {
         //This is where you would change the questionLabel.text = the answer to the question. Then award points to correct players by changing the playerOneScore.text = playerOneScore (and so on).
         //Then goToNextQuestion()
-    }
-    
-    func awardPoints()
-    {
-        //If playerAnswer == correctAnswer, chance corresponding player text label to player score + 1
-        //change timer Label to either correct or incorrect
         
         if currentPlayer.playerAnswer == "A"
         {
             questionLabel.text = "Correct!"
+            awardPoints(currentPlayer : currentPlayer)
             
         }
         else if currentPlayer.playerAnswer == "B"
         {
             questionLabel.text = "Incorrect"
         }
+        else {
+            questionLabel.text = "Something went wrong :("
+        }
+        
+    }
+    
+    func awardPoints(currentPlayer : Player)
+    {
+        //If playerAnswer == correctAnswer, chance corresponding player text label to player score + 1
+        //change timer Label to either correct or incorrect
+       
+        if currentPlayer.playerNumber == "1"
+        {
+            playerOneCount = playerOneCount + 1
+            player1Score.text = String(playerOneCount)
+        }
+        else if currentPlayer.playerNumber == "2"
+        {
+            playerTwoCount = playerTwoCount + 1
+            player1Score.text = String(playerTwoCount)
+        }
+            
+         
         
     }
     
