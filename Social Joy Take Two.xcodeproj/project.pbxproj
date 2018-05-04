@@ -14,6 +14,8 @@
 		9D695E9F209C0D0F00D6F234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D695E9D209C0D0F00D6F234 /* LaunchScreen.storyboard */; };
 		9D695EAA209C0D0F00D6F234 /* Social_Joy_Take_TwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D695EA9209C0D0F00D6F234 /* Social_Joy_Take_TwoTests.swift */; };
 		9D695EB5209C0D0F00D6F234 /* Social_Joy_Take_TwoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D695EB4209C0D0F00D6F234 /* Social_Joy_Take_TwoUITests.swift */; };
+		9D695EC3209C0D4800D6F234 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D695EC2209C0D4800D6F234 /* Player.swift */; };
+		9D695EC5209C0D5E00D6F234 /* quizScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D695EC4209C0D5E00D6F234 /* quizScreenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9D695EB0209C0D0F00D6F234 /* Social Joy Take TwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social Joy Take TwoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D695EB4209C0D0F00D6F234 /* Social_Joy_Take_TwoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Joy_Take_TwoUITests.swift; sourceTree = "<group>"; };
 		9D695EB6209C0D0F00D6F234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D695EC2209C0D4800D6F234 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9D695EC4209C0D5E00D6F234 /* quizScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizScreenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				9D695E94209C0D0F00D6F234 /* AppDelegate.swift */,
 				9D695E96209C0D0F00D6F234 /* ViewController.swift */,
+				9D695EC2209C0D4800D6F234 /* Player.swift */,
+				9D695EC4209C0D5E00D6F234 /* quizScreenController.swift */,
 				9D695E98209C0D0F00D6F234 /* Main.storyboard */,
 				9D695E9B209C0D0F00D6F234 /* Assets.xcassets */,
 				9D695E9D209C0D0F00D6F234 /* LaunchScreen.storyboard */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D695E97209C0D0F00D6F234 /* ViewController.swift in Sources */,
+				9D695EC3209C0D4800D6F234 /* Player.swift in Sources */,
+				9D695EC5209C0D5E00D6F234 /* quizScreenController.swift in Sources */,
 				9D695E95209C0D0F00D6F234 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
