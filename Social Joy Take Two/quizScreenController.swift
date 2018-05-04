@@ -209,11 +209,11 @@ class quizScreenController: UIViewController {
         //Throwing SIGBAT error because if theres only 2 players, there no thePlayers object data at 2 or 3 (3 or 4 players)
         //Could fix by
         
-        if peerID == thePlayers[0].peerID
+        if peerID.displayName == thePlayers[0].peerID
         {
             currentPlayer = thePlayers[0]
         }
-        else if thePlayers.count >= 1 && peerID == thePlayers[1].peerID
+        else if thePlayers.count >= 1 && peerID.displayName == thePlayers[1].peerID
         {
             currentPlayer = thePlayers[1]
         }
