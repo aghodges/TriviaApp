@@ -37,7 +37,7 @@ class mainMenuViewController: UIViewController, MCBrowserViewControllerDelegate,
         session.delegate = self
         browser.delegate = self
         
-        thePlayers.append(Player(peerID: self.peerID, playerNumber: "1"))
+        thePlayers.append(Player(peerID: self.peerID.displayName, playerNumber: "1"))
         
         //Set up single player & mmultiplayer games
         //self.singlePlayerGame = SinglePlayerGame(currentPlayer: Player(peerID: self.peerID))
@@ -149,15 +149,15 @@ class mainMenuViewController: UIViewController, MCBrowserViewControllerDelegate,
             
             if thePlayers.count == 1
             {
-                thePlayers.append(Player(peerID: peerID, playerNumber: "2"))
+                thePlayers.append(Player(peerID: peerID.displayName, playerNumber: "2"))
             }
             else if thePlayers.count == 2
             {
-                thePlayers.append(Player(peerID: peerID, playerNumber: "3"))
+                thePlayers.append(Player(peerID: peerID.displayName, playerNumber: "3"))
             }
             else if thePlayers.count == 3
             {
-                thePlayers.append(Player(peerID: peerID, playerNumber:"4"))
+                thePlayers.append(Player(peerID: peerID.displayName, playerNumber:"4"))
             }
             
             
