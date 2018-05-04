@@ -11,11 +11,11 @@ import UIKit
 import MultipeerConnectivity
 
 class Player {
-    var peerID : String
+    var peerID : MCPeerID
     var playerNumber : String
     var playerAnswer = ""
     
-    init(peerID: String, playerNumber: String)
+    init(peerID: MCPeerID, playerNumber: String)
     {
         self.peerID = peerID
         self.playerNumber = playerNumber
